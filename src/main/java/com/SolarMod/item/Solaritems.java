@@ -6,20 +6,24 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class Solaritems {
-    public static final Item Condensed_Emerald_Block  = registerItem("condensed_emerald_block", new Item(new Item.Settings()));
+    public static final Item CONDENSED_EMERALD_BLOCK = registerItem("condensed_emerald_block");
 
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(SolarMod.MOD_ID, name), item);
+    private static Item registerItem(String name) {
+        Identifier id = Identifier.of(SolarMod.MOD_ID, name);
+        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
+        Item.Settings settings = new Item.Settings().registryKey(key);
+
+        return Registry.register(Registries.ITEM, key, new Item(settings));
     }
 
     public static void registerItems() {
         SolarMod.LOGGER.info("Registering Solar Items for " + SolarMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries ->  {
-            entries.add(Condensed_Emerald_Block);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(CONDENSED_EMERALD_BLOCK));
     }
 }
