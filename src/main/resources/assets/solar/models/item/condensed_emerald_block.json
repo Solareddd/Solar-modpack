@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   //rendered normally like all other minecraft textures
   "textures": {
-    "layer0": "modid:item/condensed_emerald_block"
+    "layer0": "solar:item/condensed_emerald_block"
   }
 }

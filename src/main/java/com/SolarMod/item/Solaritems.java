@@ -18,8 +18,8 @@ public class Solaritems {
     public static void registerItems() {
         SolarMod.LOGGER.info("Registering Solar Items for " + SolarMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries ->  {
-            fabricItemGroupEntries.add(Condensed_Emerald_Block);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries ->  {
+            entries.add(Condensed_Emerald_Block);
         });
     }
 }

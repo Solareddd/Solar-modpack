@@ -22,5 +22,6 @@ public class SolarMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
         Solaritems.registerItems();
+
 	}
 }
