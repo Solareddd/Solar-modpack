@@ -1,5 +1,6 @@
 package com.SolarMod;
 
+import com.SolarMod.item.Solaritems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -20,5 +21,6 @@ public class SolarMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+        Solaritems.registerItems();
 	}
 }
