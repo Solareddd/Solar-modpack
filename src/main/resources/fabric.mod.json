@@ -2,25 +2,28 @@
 	"schemaVersion": 1,
 	"id": "solar",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Solar Mod",
+	"description": "A modpack creating a balanced minmized lag mob farm progression system",
 	"authors": [
-		"Me!"
+		"Solar"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Solareddd/Solar-modpack"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.SolarMod.SolarMod"
 		],
 		"client": [
 			"com.example.ExampleModClient"
-		]
+		],
+        "fabric-datagen": [
+          "com.SolarMod.SolarModDataGenerator"
+        ]
 	},
 	"mixins": [
 		"modid.mixins.json",
