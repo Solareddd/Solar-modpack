@@ -1,3 +1,6 @@
 {
-  "item.solar.condensed_emerald_block": "Condensed Emerald Block"
+  "item.solar.condensed_emerald_block": "Condensed Emerald Block",
+  "item.solar.super_condensed_emerald_block": "Super Condensed Emerald Block",
+
+  "block.solar.unknownblock" : "Unknown Block"
 }

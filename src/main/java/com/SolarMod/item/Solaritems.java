@@ -12,6 +12,9 @@ import net.minecraft.util.Identifier;
 
 public class Solaritems {
     public static final Item CONDENSED_EMERALD_BLOCK = registerItem("condensed_emerald_block");
+    //9 emerald blocks, 81 emeralds
+    public static final Item SUPER_CONDENSED_EMERALD_BLOCK = registerItem("super_condensed_emerald_block");
+    //9 condensed emerald blocks, 81 emerald blocks, 729 emeralds
 
     private static Item registerItem(String name) {
         Identifier id = Identifier.of(SolarMod.MOD_ID, name);
@@ -24,6 +27,9 @@ public class Solaritems {
     public static void registerItems() {
         SolarMod.LOGGER.info("Registering Solar Items for " + SolarMod.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(CONDENSED_EMERALD_BLOCK));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+                entries.add(CONDENSED_EMERALD_BLOCK);
+                entries.add(SUPER_CONDENSED_EMERALD_BLOCK);
+        });
     }
 }

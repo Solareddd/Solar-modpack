@@ -1,0 +1,6 @@
+{
+  "parent": "mineecraft:block/cube_all",
+  "textures": {
+    "all": "solar:block_unknownblock"
+  }
+}

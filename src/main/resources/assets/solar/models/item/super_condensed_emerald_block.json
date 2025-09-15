@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  //rendered normally like all other minecraft textures
+  "textures": {
+    "layer0": "solar:item/super_condensed_emerald_block"
+  }
+}
