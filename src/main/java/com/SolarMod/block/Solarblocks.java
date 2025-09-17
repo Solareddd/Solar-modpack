@@ -17,7 +17,10 @@ import net.minecraft.util.Identifier;
 public class Solarblocks {
 
     public static final Block UNKWOWNBLOCK = registerBlock("unknownblock.json",
-            AbstractBlock.Settings.create().strength(4f).sounds(BlockSoundGroup.AMETHYST_BLOCK));
+            AbstractBlock.Settings.create().
+            strength(4f).
+            sounds(BlockSoundGroup.AMETHYST_BLOCK)
+    );
 
     private static Block registerBlock(String name, AbstractBlock.Settings blockSettings){
        RegistryKey<Block> key  = RegistryKey.of(RegistryKeys.BLOCK,Identifier.of(SolarMod.MOD_ID, name));

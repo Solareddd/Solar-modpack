@@ -8,7 +8,7 @@ import net.minecraft.registry.RegistryKeys;
 public class SolarModDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-
-
+        FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+        pack.addProvider(SolarModelProvider::new);
     }
 }
